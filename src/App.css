@@ -1,38 +1,241 @@
 .App {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  padding: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  color: #333;
+  margin-top: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.alert {
+  background-color: #f44336;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.invoice-form {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.invoice-form h2 {
+  color: #333;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.invoice-form label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.invoice-form input[type="text"],
+.invoice-form input[type="number"],
+.invoice-form input[type="date"],
+.invoice-form input[type="email"],
+.invoice-form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.invoice-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  min-width: 125px;
+}
+
+.invoice-list {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.invoice-list h2 {
+  color: #333;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.invoice-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.invoice-list li {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #fff;
+}
+
+.invoice-list h3 {
+  color: #333;
+  margin: 0;
+}
+
+.invoice-list h4 {
+  color: #666;
+}
+
+.invoice-list button {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  min-width: 125px;
+}
+.btn-wrapper{
+  text-align: center;
+  margin-right: 10px;
+}
+
+.filter {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.filter label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.filter select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+.new-invoice-label {
+  text-align: center;
+}
+
+.item-form {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.item-form h3 {
+  color: #333;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+}
+
+.input-row input {
+  padding: 10px !important;
+  margin-top: 5px !important;
+  border: 1px solid #ccc !important;
+  border-radius: 5px !important;
+  margin: 0 10px;
+}
+
+.input-row textarea {
+  width: 100% !important;
+  padding: 10px !important;
+  border: 1px solid #ccc !important;
+  border-radius: 5px !important;
+  resize: none;
+  height: 50px;
+  margin: 5px 10px 0px 10px;
+}
+
+.add-line-item-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  align-self: flex-start;
+}
+
+.input-container {
   display: flex;
   flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.row label {
+  width: 20%;
+  text-align: right;
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.row input {
+  width: 60% !important;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.row select {
+  width: 62.5%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  @media (max-width: 767px) {
+    width: 48vw;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.due-details-block{
+  margin: 0px 10px;
+}
+
+@media(min-width: 1024px){
+  .main-block{display: flex;}
+  .sub-block{width: 100%; margin:0px 10px;}
+  .row{flex-direction: column; width: 100%; margin: 0px 10px;}
+  .row input{width: 90% !important;}
+  .row label{width: 100%; text-align: left; margin-right: 0;}
+  .due-details-block{display: flex; }
+  .row select{width: 100%;}
+  .sub-block-custom{max-height: 760px; overflow: scroll;}
 }
