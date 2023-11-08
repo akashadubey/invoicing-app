@@ -1,3 +1,18 @@
-Step 1:- Clone the repository
-Step 2:- Run the command "npm install"
-Step 3:- Run the command "npm start"
+## Project setup
+
+npm install
+
+
+### Compiles and hot-reloads for development
+
+npm start
+
+
+### Compiles and minifies for production
+
+npm run build
+
+
+### Run your tests
+
+npm run test
